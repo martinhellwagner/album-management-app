@@ -6,4 +6,4 @@ This iOS app project – which used to be available on the iOS App Store under t
 
 ## How to get stared
 
-Simply import the project into your [XCode](https://developer.apple.com/xcode) (available on the Mac App Store) and run it in the Simulator. Alternatively, you can also run it on an iPhone that is connected to your Mac while Xcode is opened. Please note that development of this project is not ongoing and the app has only been tested up to iPhone 5S.
+Simply import the project into your [XCode](https://developer.apple.com/xcode) (available on the Mac App Store) and run it in the Simulator. Alternatively, you can also run it on an iPhone that is connected to your Mac while Xcode is opened. Please note that development of this project is not ongoing and the app has only been tested up to iPhone 6.
