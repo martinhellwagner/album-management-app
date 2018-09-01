@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="is2-hE-pru">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Select artists-->
+        <scene sceneID="Wp6-sH-lxT">
+            <objects>
+                <tableViewController id="fA2-PX-QWy" customClass="SelectArtists" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Select artists" id="mai-py-ldj">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Y6B-3f-s1Q"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="lF8-4E-4B7">
+                            <connections>
+                                <segue destination="GlY-lj-x5J" kind="push" identifier="firstSegue" id="PHU-oF-UzD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8mS-S2-OOW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-108" y="-1329"/>
+        </scene>
+        <!--Specify options-->
+        <scene sceneID="2ux-c9-TNE">
+            <objects>
+                <viewController id="GlY-lj-x5J" customClass="SpecifyOptions" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yoG-ei-H4U"/>
+                        <viewControllerLayoutGuide type="bottom" id="nB5-S1-sau"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1bZ-TS-Oit">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8QL-WF-RYk">
+                                <rect key="frame" x="104" y="126" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Album type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqV-uc-C2J">
+                                <rect key="frame" x="77" y="107" width="166" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Album age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tp8-Iu-LYG">
+                                <rect key="frame" x="74" y="232" width="172" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6uN-cI-rBy">
+                                <rect key="frame" x="59" y="153" width="202" height="29"/>
+                                <segments>
+                                    <segment title="Both"/>
+                                    <segment title="Missing"/>
+                                    <segment title="Surplus"/>
+                                </segments>
+                                <connections>
+                                    <action selector="type:" destination="GlY-lj-x5J" eventType="valueChanged" id="8m3-0h-zyx"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tNk-Ia-emO">
+                                <rect key="frame" x="59" y="280" width="202" height="29"/>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="Recent only"/>
+                                </segments>
+                                <connections>
+                                    <action selector="age:" destination="GlY-lj-x5J" eventType="valueChanged" id="bmD-La-7WI"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2M5-cW-ZYN">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vO3-BL-QPl">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                            </adBannerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Specify options" id="JVI-qE-CAQ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="XJD-ZA-SCl"/>
+                        <barButtonItem key="rightBarButtonItem" title="Scan" id="D6h-Ds-SJb"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="age" destination="tNk-Ia-emO" id="v7r-Nb-njJ"/>
+                        <outlet property="type" destination="6uN-cI-rBy" id="Upo-Lg-1k0"/>
+                        <segue destination="01U-hb-Hax" kind="push" identifier="secondSegue" id="TFI-YJ-VgG"/>
+                        <segue destination="PvP-hE-iCb" kind="push" identifier="thirdSegue" id="W8c-Jp-8xd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eBO-Ee-Zec" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="-1329"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="hOS-54-trh">
+            <objects>
+                <viewController restorationIdentifier="Results" storyboardIdentifier="Results" title="Results" id="01U-hb-Hax" customClass="Results" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Vwz-TM-S1b">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="aou-QJ-7mP"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EQi-vr-gth" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-108" y="-513"/>
+        </scene>
+        <!--ResultsDetails-->
+        <scene sceneID="EEh-CL-JmD">
+            <objects>
+                <tableViewController restorationIdentifier="ResultsDetails" storyboardIdentifier="ResultsDetails" title="ResultsDetails" id="PvP-hE-iCb" customClass="ResultsDetails" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Ugt-Re-cjw">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="2A8-Z3-k6w"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="67u-Iv-rkJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="-513"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a3I-7U-nVH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="is2-hE-pru" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="dCr-L4-qwd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="97f-id-aoQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fA2-PX-QWy" kind="relationship" relationship="rootViewController" id="388-MQ-5Nu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kvw-rT-q3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-623" y="-1329"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
